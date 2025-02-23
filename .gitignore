@@ -1,33 +1,54 @@
-# Gradle files
+# 💾 Android Studio & Gradle
 .gradle/
-build/
+.idea/
+captures/
+*.iml
+*.hprof
 
-# Local configuration file (sdk path, etc)
+# Build директории
+/build/
+**/build/
+**/out/
+
+# API-ключи и конфиденциальные данные
 local.properties
+*.keystore
+*.jks
+secrets.properties
 
-# Log/OS Files
+# Настройки IntelliJ IDEA / Android Studio
+*.iws
+*.ipr
+*.swp
+*.swo
+
+# Кэширование библиотек
+.cxx/
+.externalNativeBuild/
+.cordova/
+.cocoapods/
+.metadata/
+.p4ignore
+
+# Логи и дампы
+*.log
+log/
+logs/
+hs_err_pid*
+crashlytics/
+
+# Картинки, кеши, временные файлы
+fastlane/report.xml
+fastlane/screenshots/
+fastlane/test_output/
 *.log
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
+# Gradle Wrapper
+gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
+
+# Настройки CI/CD
+/.github/workflows/*.yml
 *.apk
-output.json
-
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
+*.aab
+*.ipa
