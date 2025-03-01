@@ -1,19 +1,22 @@
 [versions]
-agp = "8.7.2"
-kotlin = "2.0.0"
+agp = "8.7.3"
+kotlin = "2.1.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+activityCompose = "1.10.1"
+composeBom = "2025.02.00"
 compose = "1.3.0"
 retrofit = "2.9.0"
-hilt = "2.44"
-room = "2.4.3"
-coroutines = "1.6.4"
-navigationCompose = "2.5.3"
+hilt = "2.54"
+room = "2.6.1"
+coroutines = "1.10.1"
+navigationCompose = "2.8.8"
+appcompat = "1.7.0"
+material = "1.12.0"
+jetbrainsKotlinJvm = "2.1.0"
 
 
 [libraries]
@@ -38,6 +41,9 @@ retrofit-converter-gson = { module = "com.squareup.retrofit2:converter-gson", ve
 
 # Coroutines (асинхронные операции)
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+
+
 
 # Hilt (Dependency Injection)
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
@@ -47,9 +53,13 @@ hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hil
 junit = { module = "junit:junit", version.ref = "junit" }
 androidx-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
 androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kapt = { id = "org.jetbrains.kotlin.kapt" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
